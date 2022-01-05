@@ -158,8 +158,42 @@
     <p>변수에는 하나의 값만 넣을 수 있다. 만약 변수 box에 값을 두 번 넣으면, 기존에 있던 데이터는 삭제 되고 새로운 데이터가 저장 된다. (<a href="javascript01.html"> 02.
             변수 참고(데이터 저장+변경 )</a></p>
 
+<br>
+<p>변수를 선언하면 변수명으로 데이터를 저장할 수 있는 공간이 생성된다. 다음은 box라는 이름을 가진 변수에 100이라는 값을 대입한 예제이다. 초기에는 값이 등록되지 않은 상태(undefined)이다. box에 100을 대입하면 다음 그림과 같이 변수에 100이 저장된다.</p>
+   <br>
+     <!-- sample2 -->
+     <div id="sample1" class="sample">
+     
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+    var box;
+    box=100;
+    </code></pre>
+        </div>
+    </div>
+    <!-- //sample2 -->
+    <br>
 
-   
+<p>변수에는 하나의 값만 넣을 수 있다. 만약 변수 box에 값을 두 번 넣으면 어떻게 될까? 다음과 같이 변수 box에 새로운 데이터 30이 저장되면 기존에 저장되어 잇던 데이터 100은 삭제되고 새로운 데이터 30이 저장된다.</p>
+     
+<br>
+<!-- sample1 -->
+      <div id="sample1" class="sample">
+        <h3>코딩해 보세요!</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+05:    &lt;script&gt;    
+06:     var box;
+07:     box=100;
+08:     box=30;
+09:     document.write(box);    //30
+10:     &lt;/script&gt;
+    </code></pre>
+        </div>
+    </div>
+    <!-- //sample1 -->
+
+    
     <script src="../asset/js/prism.js">
 
     </script>
