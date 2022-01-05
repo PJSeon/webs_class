@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
-
+    <title>reference</title>
     <style>
         @font-face {
             font-family: 'NexonLv1Gothic';
@@ -124,62 +123,53 @@
         .sample pre {
             margin: 0 !important;
             border-radius: 0 0 5px 5px !important;
-
         }
     </style>
     <link rel="stylesheet" href="../asset/css/prism.css">
 </head>
 
 <body>
-
-    <h1>기초문법</h1>
-    <p>자바스크립트 선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다. 
-    <p>&lt;script&gt;라는 태그로 선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지는 스크립트 영역이라고 부른다.</p>
-    <hr>
+    <h1>식별자/키워드</h1>
+    <h2>식별자</h2>
+    <p>이름을 붙일 때 사용하는 단어로, 프로그래머가 선언하는 단어이다.</p>
+    <p>변수나 함수의 이름을 작성할 때 쓰인다.</p>
+    <p>고유하게 식별 될 수 있도록 프로그램의 실체를 제공한 이름으로, 변수, 함수, 클래스, 레이블 및 기타 다양한 사용자 정의 객체의 이름을 가진다.</p>
+    <br>
+    <p>식별자에는 아래와 같은 규칙이 있다.</p>
+    <br>
     <!-- sample1 -->
     <div id="sample1" class="sample">
-        <h3>기본형</h3>
+        <h3>식별자 규칙</h3>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">
-    &lt;script&gt; 
-    자바스크립트 코드;
-    &lt;/script &gt;
-            </code></pre>
+    1. 키워드를 사용하면 안 된다.
+    2. 숫자로 시작하면 안 된다.
+    3. 특수문자는 _, $만을 허용한다.
+    4. 공백 문자를 포함할 수 없다.
+</code></pre>
         </div>
     </div>
     <!-- //sample1 -->
 
     <hr>
-<p>선언문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역에 선언하면 된다.</p>
-<p> 우리나라 개발자의 대부분은 &lt;head&gt; 태그 영역에 선언하고 있다.</p>
-<br>
-   <!-- sample2 -->
-   <div id="sample1" class="sample">
-    <h3>예제</h3>
-    <div class="code">
-        <pre class="line-numbers"><code class="language-js">
-01: &lt;DOCTYPEhtml&gt;
-02: &lt;html lang="ko"&gt;
-03: &lt;head&gt;
-04:     &lt;meta charset="UTF-8"&gt;
-05:     &lt;title&gt;Document&lt;/title&gt;
-06:     &lt;script&gt;
-07:     document.write("환영합니다");
-08:     &lt;/script&gt;
-09: &lt;/head&gt;
-10: &lt;body&gt;
-11: &lt;/body&gt;
-12: &lt;/html&gt;
-        </code></pre>
+    <h2>키워드</h2>
+    <p>자바스크립트 안에 이미 존재하는 예약된 단어이다. (예약어라고도 한다)</p>
+    <p>즉, 이 키워드는 식별자의 이름을 지정하는 데 사용 할 수 없다. 그리고 각 키워드는 별개의 의미를 가진다.</p>
+    <p></p>
+    <br>
+    <!-- sample1 -->
+    <div id="sample1" class="sample">
+        <h3>28가지 키워드</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+    break, if, else, instanceof, true, false, switch, case, default, try, catch, finally, null, typeof, continue, for, return, var, new, function, void, delete, this, while, do, in, throw, with 
+</code></pre>
+        </div>
     </div>
-</div>
-<!-- //sample2 -->
-<br>
-<p>script 태그를 head가 아닌 body에 넣으면 기본적인 HTML의 컨텐츠를 빠르게 확인이 가능하다.</p>
-<p>다만, 웹사이트가 JS에 대한 의존도가 높은 경우 사용자가 정상적인 콘텐츠를 확인하기 위해서는 기다림이 필요해진다.</p>
-    <script src="../asset/js/prism.js"></script>
-   
+    <!-- //sample1 -->
+    <script src="../asset/js/prism.js">
     </script>
+
 </body>
 
 </html>

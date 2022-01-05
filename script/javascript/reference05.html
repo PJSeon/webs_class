@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
-
+    <title>reference</title>
     <style>
         @font-face {
             font-family: 'NexonLv1Gothic';
@@ -124,62 +123,53 @@
         .sample pre {
             margin: 0 !important;
             border-radius: 0 0 5px 5px !important;
-
         }
     </style>
     <link rel="stylesheet" href="../asset/css/prism.css">
 </head>
 
 <body>
+    <h1>객체</h1>
+    <p>자바스크립트는 객체(Object) 기반 언어이다.</p>
+    <p>객체는 기능과 속성을 가지고 있다. 가령, TV에는 켜다, 끄다, 음소거하다 등의 기능이 있다. 이렇듯 TV 라는 객체에는 다양한 기능이 있고, 이러한 주변의 모든 사물을 객체라고 한다.</p>
+    <br>
+    <p>자바스크립트에는 다양한 객체가 있다. 앞서 Document로 출력기능을 사용해 보았다.</p>
+    <p>자바스크립트에서는 이런 기능들을 메서드(Method)라고 한다. 또한 객체는 속성(Property)을 가지고 있다.</p> 
+    <br>
+     <!-- sample1 -->
+     <div id="sample1" class="sample">
+        <h3>TV로 예를 들어본다면,</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+    메서드(Method) - 기능 (켜다();, 끄다();, 볼륨을 높이다();)
+    속성(Property) - 속성 (너비; 높이; 색상; 무게;)
+</code></pre>
+        </div>
+    </div>
+    <!-- //sample1 -->
+<hr>
 
-    <h1>기초문법</h1>
-    <p>자바스크립트 선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다. 
-    <p>&lt;script&gt;라는 태그로 선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지는 스크립트 영역이라고 부른다.</p>
-    <hr>
-    <!-- sample1 -->
+<p>자바스크립트 객체의 메서드와 속성을 사용하는 기본형은 다음과 같다</p>
+<br>
+    <!-- sample2 -->
     <div id="sample1" class="sample">
         <h3>기본형</h3>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">
-    &lt;script&gt; 
-    자바스크립트 코드;
-    &lt;/script &gt;
-            </code></pre>
+    1. 객체.메서드();
+    2. 객체.속성; 
+    3. 객체.속성=값;
+</code></pre>
         </div>
     </div>
-    <!-- //sample1 -->
-
-    <hr>
-<p>선언문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역에 선언하면 된다.</p>
-<p> 우리나라 개발자의 대부분은 &lt;head&gt; 태그 영역에 선언하고 있다.</p>
-<br>
-   <!-- sample2 -->
-   <div id="sample1" class="sample">
-    <h3>예제</h3>
-    <div class="code">
-        <pre class="line-numbers"><code class="language-js">
-01: &lt;DOCTYPEhtml&gt;
-02: &lt;html lang="ko"&gt;
-03: &lt;head&gt;
-04:     &lt;meta charset="UTF-8"&gt;
-05:     &lt;title&gt;Document&lt;/title&gt;
-06:     &lt;script&gt;
-07:     document.write("환영합니다");
-08:     &lt;/script&gt;
-09: &lt;/head&gt;
-10: &lt;body&gt;
-11: &lt;/body&gt;
-12: &lt;/html&gt;
-        </code></pre>
-    </div>
-</div>
-<!-- //sample2 -->
-<br>
-<p>script 태그를 head가 아닌 body에 넣으면 기본적인 HTML의 컨텐츠를 빠르게 확인이 가능하다.</p>
-<p>다만, 웹사이트가 JS에 대한 의존도가 높은 경우 사용자가 정상적인 콘텐츠를 확인하기 위해서는 기다림이 필요해진다.</p>
-    <script src="../asset/js/prism.js"></script>
-   
+    <!-- //sample2 -->
+    <br>
+    <p>1. 객체의 메서드를 실행한다.</p>
+    <p>2. 객체의 속성값을 가져온다.</p>
+    <p>3. 객체의 속성값을 바꾼다.</p>
+    <script src="../asset/js/prism.js">
     </script>
+
 </body>
 
 </html>

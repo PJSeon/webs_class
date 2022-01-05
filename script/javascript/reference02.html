@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
-
+    <title>reference</title>
     <style>
         @font-face {
             font-family: 'NexonLv1Gothic';
@@ -124,62 +123,47 @@
         .sample pre {
             margin: 0 !important;
             border-radius: 0 0 5px 5px !important;
-
         }
     </style>
     <link rel="stylesheet" href="../asset/css/prism.css">
 </head>
 
 <body>
+    <h1>변수란?</h1>
+    <p>말 그대로 변하는 수.</p>
+    <p>변수는 변하는 데이터(값)를 저장할 수 있는 메모리 공간이다. 데이터를 담을 수 있는 그릇으로, 변수에는 오직 한 개만 저장된다.</p>
+    <p>새로운 데이터가 들어오면 기존에 있던 데이터는 메모리 공간에서 지워진다.</p>
+    <p>변수에 저장할 수 있는 데이터의 종류는 문자형(String), 숫자형(Number), 논리형(Boolean) 그리고 빈(Null) 데이터가 있다.</p>
 
-    <h1>기초문법</h1>
-    <p>자바스크립트 선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다. 
-    <p>&lt;script&gt;라는 태그로 선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지는 스크립트 영역이라고 부른다.</p>
+    <h2>변수 선언</h2>
+    <p>변수를 선언 할 때는 var나 let 키워드를 변수명 앞에 붙인다. 변수명에는 한글을 사용 할 수 없으며, 영문과 숫자 그리고 일부 특수 문자(_, $)만 포함할 수 있다.</p>
+
     <hr>
+
     <!-- sample1 -->
     <div id="sample1" class="sample">
-        <h3>기본형</h3>
+        <h3>변수 선언</h3>
         <div class="code">
             <pre class="line-numbers"><code class="language-js">
-    &lt;script&gt; 
-    자바스크립트 코드;
-    &lt;/script &gt;
-            </code></pre>
+    [val 변수명; 또는 val 변수명=값;]
+    [let 변수명; 또는 let 변수명=값;]
+    </code></pre>
         </div>
     </div>
     <!-- //sample1 -->
 
     <hr>
-<p>선언문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역에 선언하면 된다.</p>
-<p> 우리나라 개발자의 대부분은 &lt;head&gt; 태그 영역에 선언하고 있다.</p>
-<br>
-   <!-- sample2 -->
-   <div id="sample1" class="sample">
-    <h3>예제</h3>
-    <div class="code">
-        <pre class="line-numbers"><code class="language-js">
-01: &lt;DOCTYPEhtml&gt;
-02: &lt;html lang="ko"&gt;
-03: &lt;head&gt;
-04:     &lt;meta charset="UTF-8"&gt;
-05:     &lt;title&gt;Document&lt;/title&gt;
-06:     &lt;script&gt;
-07:     document.write("환영합니다");
-08:     &lt;/script&gt;
-09: &lt;/head&gt;
-10: &lt;body&gt;
-11: &lt;/body&gt;
-12: &lt;/html&gt;
-        </code></pre>
-    </div>
-</div>
-<!-- //sample2 -->
-<br>
-<p>script 태그를 head가 아닌 body에 넣으면 기본적인 HTML의 컨텐츠를 빠르게 확인이 가능하다.</p>
-<p>다만, 웹사이트가 JS에 대한 의존도가 높은 경우 사용자가 정상적인 콘텐츠를 확인하기 위해서는 기다림이 필요해진다.</p>
-    <script src="../asset/js/prism.js"></script>
+    <p>변수명은 의미에 맞게 사용하는 것이 좋다. 가령, 수학 시험 점수를 저장하는 변수라면 'mathNum'이라고 이름을 지으면 좋다.</p>
+    <p>이때 변수명은 단어와 단어의 조합으로 지었고, 두번째 단어의 첫 글자는 대문자로 표기했다. 이는 낙타의 등과 같다고 해서 낙타(Camel) 표기법이라고 한다.</p>
+    <p>변수에는 하나의 값만 넣을 수 있다. 만약 변수 box에 값을 두 번 넣으면, 기존에 있던 데이터는 삭제 되고 새로운 데이터가 저장 된다. (<a href="javascript01.html"> 02.
+            변수 참고(데이터 저장+변경 )</a></p>
+
+
    
+    <script src="../asset/js/prism.js">
+
     </script>
+
 </body>
 
 </html>

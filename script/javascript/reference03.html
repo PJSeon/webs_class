@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
-
+    <title>reference</title>
     <style>
         @font-face {
             font-family: 'NexonLv1Gothic';
@@ -124,62 +123,121 @@
         .sample pre {
             margin: 0 !important;
             border-radius: 0 0 5px 5px !important;
-
         }
     </style>
     <link rel="stylesheet" href="../asset/css/prism.css">
 </head>
 
 <body>
-
-    <h1>기초문법</h1>
-    <p>자바스크립트 선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다. 
-    <p>&lt;script&gt;라는 태그로 선언문이 시작된 곳부터 &lt;/script&gt;라는 태그로 종료된 곳까지는 스크립트 영역이라고 부른다.</p>
-    <hr>
-    <!-- sample1 -->
-    <div id="sample1" class="sample">
-        <h3>기본형</h3>
-        <div class="code">
-            <pre class="line-numbers"><code class="language-js">
-    &lt;script&gt; 
-    자바스크립트 코드;
-    &lt;/script &gt;
-            </code></pre>
-        </div>
-    </div>
-    <!-- //sample1 -->
-
-    <hr>
-<p>선언문은 &lt;head&gt; 태그 영역 또는 &lt;body&gt; 태그 영역에 선언하면 된다.</p>
-<p> 우리나라 개발자의 대부분은 &lt;head&gt; 태그 영역에 선언하고 있다.</p>
-<br>
-   <!-- sample2 -->
-   <div id="sample1" class="sample">
-    <h3>예제</h3>
+    <h1>변수에 저장할 수 있는 자료형</h1>
+    <h3>문자형</h3>
+    <p>문자형(String) 데이터는 [val 변수="사용할 문자나 숫자";] 처럼, 큰따옴표와 작은따옴표로 감싸고 있어야 한다. 또한 문자형 데이터에 HTML 태그를 포함하여 출력하면 태그로 인식한다.</p>
+    <br>
+<!-- sample2 -->
+<div id="sample1" class="sample">
+    <h3>기본형 : var 변수="사용할 문자나 숫자"; </h3>
     <div class="code">
         <pre class="line-numbers"><code class="language-js">
-01: &lt;DOCTYPEhtml&gt;
-02: &lt;html lang="ko"&gt;
-03: &lt;head&gt;
-04:     &lt;meta charset="UTF-8"&gt;
-05:     &lt;title&gt;Document&lt;/title&gt;
-06:     &lt;script&gt;
-07:     document.write("환영합니다");
-08:     &lt;/script&gt;
-09: &lt;/head&gt;
-10: &lt;body&gt;
-11: &lt;/body&gt;
-12: &lt;/html&gt;
-        </code></pre>
+    var s="script";
+    var num="100";
+    var tag="&lt;h1&gt; String &lt;/h1&gt;";
+
+</code></pre>
     </div>
 </div>
-<!-- //sample2 -->
 <br>
-<p>script 태그를 head가 아닌 body에 넣으면 기본적인 HTML의 컨텐츠를 빠르게 확인이 가능하다.</p>
-<p>다만, 웹사이트가 JS에 대한 의존도가 높은 경우 사용자가 정상적인 콘텐츠를 확인하기 위해서는 기다림이 필요해진다.</p>
-    <script src="../asset/js/prism.js"></script>
-   
+<!-- //sample2 -->
+    <!-- sample2 -->
+    <div id="sample1" class="sample">
+        <h3>문자형 예시</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+    var x = 100; //변수 x에 숫자 100을 저장 
+    var y = 200; //변수 y에 숫자 200을 저장 
+    var z = "javascript"; //변수 z에 문자 javascript 저장, 문자 입력시에는 " "
+    
+</code></pre>
+        </div>
+    </div>
+    <!-- //sample2 -->
+
+    <hr>
+
+    <h3>숫자형</h3>
+    <p>숫자형은(Number) 데이터는 단어 의미 그대로 숫자를 의미한다. 만약 "100"과 같이 큰따옴표가 숫자를 감싸고 있다면 숫자가 아닌 문자형 데이터이다. 이 경우에는 number("100")를 이용하면
+        문자형 데이터를 숫자형 데이터로 바꿀 수 있다.</p>
+    <br>
+    <!-- sample3 -->
+    <div id="sample1" class="sample">
+        <h3>기본형 : var 변수=숫자, 또는 Number("문자형 숫자");</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+    val s=100;  <br>
+    val t=Number("500"); //"500" → 500 
+</code></pre>
+        </div>
+    </div>
+    <!-- //sample3 -->
+
+    <hr>
+
+
+    <h3>논리형</h3>
+    <p>논리형(Boolean) 데이터는 true(참) 또는 false(거짓)가 있다. 이 데이터는 주로 2개의 데이터를 비교할 때 나오는 결과이다.</p>
+    <p>예를 들어 '100보다 10이 크다'는 잘못된 비교이므로 false라는 결과를 반환하게 된다. </p>
+    <br>
+    <!-- sample4 -->
+    <div id="sample1" class="sample">
+        <h3>기본형 : var 변수=true or false; 또는 Boolean(데이터); </h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+    var s=true;
+    var t=10>=100; //false 
+    var k=Boolean("hello"); //true
+</code></pre>
+        </div>
+    </div>
+    <!-- //sample4 -->
+
+    <hr>
+
+
+    <h3>null & undefined 데이터</h3>
+    <p>undefined는 변수 s에 값이 등록되기 전의 기본값이고, null은 변수에 저장된 값이 null인 경우를 가리킨다. null은 변수에 저장된 데이터를 비우고자 할 때 사용하는 값이다.</p>
+<br>
+    <!-- sample4 -->
+    <div id="sample1" class="sample">
+        <h3>null & undefined 데이터</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+    var s;  //undefined
+    var t=hello;
+    t=null;
+</code></pre>
+        </div>
+    </div>
+    <!-- //sample4 -->
+
+    <hr>
+
+
+    <h3>typeof</h3>
+    <p>typeof는 지정한 데이터 또는 변수에 저장된 자료형을 알고 싶을 때 사용한다. 기본형은 다음과 같다.</p>
+    <br>
+    <!-- sample4 -->
+    <div id="sample1" class="sample">
+        <h3>typeof</h3>
+        <div class="code">
+            <pre class="line-numbers"><code class="language-js">
+    typeof 변수 또는 데이터;
+</code></pre>
+        </div>
+    </div>
+    <!-- //sample4 -->
+    <script src="../asset/js/prism.js">
+
     </script>
+
 </body>
 
 </html>
