@@ -6,126 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript</title>
 
-    <style>
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 300;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicLight.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 400;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicRegular.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'NexonLv1Gothic';
-            font-weight: 700;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/NexonLv1Gothic/NexonLv1GothicBold.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'NexonLv1Gothic';
-            line-height: 1.6;
-        }
-
-        body {
-            padding: 5%;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        hr {
-            margin: 5% 0;
-            border-style: dashed;
-            border-color: #e6e6e6;
-            border-width: 0px;
-            border-bottom-width: 1px;
-        }
-
-        h1 {
-            padding-bottom: 20px;
-            font-size: 50px;
-        }
-
-        .list1 li {
-            display: inline;
-        }
-
-        .list1 li a {
-
-            border: 1px solid #333;
-            padding: 8px 30px 5px 30px;
-            border-radius: 40px;
-            display: inline-block;
-            margin-bottom: 10px;
-        }
-
-        .refer {
-            background: #000;
-            color: #fff;
-            padding: 2px 10px 0 10px;
-            border-radius: 30px;
-        }
-
-        h2 {
-            margin-top: 30px;
-            background-color: #000;
-            color: #fff;
-            display: inline-block;
-            margin-bottom: 10px;
-            font-weight: 400;
-            padding: 3px 10px 0 10px;
-            font-size: 24px;
-        }
-
-        .sample {
-            border-radius: 5px;
-        }
-
-        .sample h3 {
-            background: #f2f2f2;
-            font-size: 16px;
-            padding: 20px 20px 15px 20px;
-            border-radius: 5px 5px 0 0;
-            border-bottom: 1px solid #e6e6e6;
-            border: 1px solid #e6e6e6;
-        }
-
-        .sample pre {
-            margin: 0 !important;
-            border-radius: 0 0 5px 5px !important;
-
-        }
-    </style>
+    <link rel="stylesheet" href="../asset/css/style.css">
     <link rel="stylesheet" href="../asset/css/prism.css">
 </head>
 
@@ -173,7 +54,7 @@
     var y = 200;                //변수 y에 숫자 200을 저장
     var z = "javascript";       //변수 z에 문자 javascript 저장, 문자 입력시에는 " "
 
-    document.write("*** 01. 변수 ***&lt;br&gt;");
+    document.write("&lt;br&gt;*** 01. 변수 ***&lt;br&gt;");
     document.write(x, "&lt;br&gt;");
     document.write(y, "&lt;br&gt;");
     document.write(z, "&lt;br&gt;");
@@ -220,7 +101,7 @@
     y += 400;
     z += "jquery";
 
-    document.write ("*** 03. 변수 *** &lt;br&gt;");
+    document.write ("&lt;br&gt;*** 03. 변수 *** &lt;br&gt;");
     document.write (x, "&lt;br&gt;");
     document.write (y, "&lt;br&gt;");
     document.write (z, "&lt;br&gt;");
@@ -240,7 +121,7 @@
     let y = 200;
     let z = "javascript";
 
-    document.write("*** 04. 변수 : 변수의 종류 *** &lt;br&gt;");
+    document.write("&lt;br&gt;*** 04. 변수 : 변수의 종류 *** &lt;br&gt;");
     document.write(x, "&lt;br&gt;");
     document.write(y, "&lt;br&gt;");
     document.write(z, "&lt;br&gt;");
@@ -263,7 +144,7 @@
     //y = 400;
     //z = "jquery";
 
-    document.write"(*** 05. 상수 : 상수의 종류 *** &lt;br&gt;");
+    document.write"(&lt;br&gt;*** 05. 상수 : 상수의 종류 *** &lt;br&gt;");
     document.write(x, "&lt;br&gt;");
     document.write(y, "&lt;br&gt;");
     document.write(z, "&lt;br&gt;");
@@ -284,7 +165,7 @@
     arr[1] = 200;
     arr[2] = "javascript";
 
-    document.write("*** 06. 배열 *** &lt;br&gt;");
+    document.write("&lt;br&gt;*** 06. 배열 *** &lt;br&gt;");
     document.write(arr[0], "&lt;br&gt;");
     document.write(arr[1], "&lt;br&gt;");
     document.write(arr[2], "&lt;br&gt;");
@@ -302,7 +183,7 @@
             <pre class="line-numbers"><code class="language-js"> {
     const arr = new Array(100, 200, "javascript");
 
-    document.write("*** 07. 배열 *** &lt;br&gt;");
+    document.write("&lt;br&gt;*** 07. 배열 *** &lt;br&gt;");
     document.write(arr[0], "&lt;br&gt;");
     document.write(arr[1], "&lt;br&gt;");
     document.write(arr[2], "&lt;br&gt;");
@@ -448,7 +329,7 @@
             var y = 200; //변수 y에 숫자 200을 저장
             var z = "javascript"; //변수 z에 문자 javascript 저장, 문자 입력시에는 " "
 
-            document.write("*** 01. 변수 ***<br>");
+            document.write("<br>*** 01. 변수 ***<br>");
             document.write(x, "<br>");
             document.write(y, "<br>");
             document.write(z, "<br>");
