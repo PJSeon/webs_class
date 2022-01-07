@@ -35,30 +35,88 @@
                 함수 등을 표현할 수 있습니다.
             </p>
 
-
             <h3>숫자(Number)</h3>
-            <p></p>
+            <p>숫자형(Number) 데이터는 단어 의미 그대로 숫자를 의미합니다.</p>
+            <p>만약 "100"과 같이 큰따옴표가 숫자를 감싸고 있다면 숫자가 아닌 문자형 데이터입니다.</p>
+           
+            <div class="code">
+<pre><code>var a = 100;   → 숫자형 데이터
+var b = "500";    → 문자형 데이터
+</code></pre>
+            </div>
 
-            <h3>문자열(String)</h3>
-            <p></p>
-
-            <h3>논리값(Number)</h3>
-            <p></p>
+            <h3>문자형(String)</h3>
+            <p>문자형(String) 데이터는 문자나 숫자를 큰따옴표("") 또는 작은따옴표('')로 감싸고 있습니다.</p>
+            <div class="code">
+<pre><code>var a = "javascript";
+var b = "100";
+var c = "&lt;h1&gt; String &lt;/h1&gt;;"    
+</code></pre>
+            </div>
+            <h3>논리형(Boolean)</h3>
+            <p>논리형(Boolean)데이터는 true(참) 또는 false(거짓)가 있습니다.</p>
+            <p>이 데이터는 주로 2개의 데이터를 비교할 때 나오는 결과입니다.</p>
+            <p>예를 들어, [100보다 10이 크다]는 잘못된 비교로, false라는 결과가 나옵니다.</p>
+            <div class="code">
+<pre><code>var a = true;
+var b = 10>=100;                //false
+var c = Boolean("hello")        //true
+</code></pre>
+            </div>
 
             <h3>특수값(Null)</h3>
-            <p></p>
+            <p>말 그대로 빈 값입니다.</p>
+            <p>Undefined형은 안에 아무 데이터가 없는 것이지만, Null형은 메모리 안에 Null이라는 값이 저장된 상태입니다.</p>
+            <p>Null은 값이 없다는 것을 의무적으로 표현할 때 사용합니다.</p>
+            <div class="code">
+<pre><code>var nothing = null;
+</code></pre>
+            </div>
 
-            <h3>특수값(Number)</h3>
-            <p></p>
-
+            <h3>특수값(Undefined))</h3>
+            <p>값을 할당하지 않은 변수가 가지는 값</p>
+            <p>변수명만 선언하고 변수 값이 없을 경우 나타나며 데이터가 비어있다는 의미입니다.</p>
+            
             <h3>심벌(Symbol)</h3>
-            <p></p>
+            <p>심볼(symbol)은 ECMA6에 추가된 타입으로, 유일한 식별자(unique identifier)를 만들고 싶을 때 사용합니다.</p>
+            <p>쉽게 말해 유일하고 변경이 불가능한 기본값입니다.</p>
+            <div class="code">
+<pre><code>let Sym1 = Symbol("Sym")
+let Sym2 = Symbol("Sym")
+
+console. log(Sym1 ===Sym2)  // "false"
+</code></pre>
+            </div>
+분명 같은 "Sym" 이니 둘이 같다고 나올 것 같지만, 서로 다른 객체로 취급됩니다.
 
             <h3>객체(Object)</h3>
-            <p></p>
+            <p>식별자로 참조할 수 있는 메모리 상의 값을 말합니다.</p>
+            <p>쉽게 말하자면, 속성들을 담고 있는 주머니라고 볼 수 있습니다.</p>
+            <div class="code">
+<pre><code> const me {
+    name : "JS",
+    age : 29,
+    gender : "female"
+}
+</code></pre>
+            </div>
+            <p>"me" 라는 객체는 name, age, gender의 속성을 갖습니다. </p>
+            <p>이 때, "me"는 식별자라고 합니다.</p>
+            <p>name, age, gender은 키 값이라고 불리며, 문자형 또는 심볼형이 사용될 수 있습니다.</p>
+            <p>하지만, "JS", 29, "female"은 각 키에 해당하는 값이라고 부리며, 어떠한 자료형도 올 수 있습니다.</p>
 
             <h3>함수(Function)</h3>
-            <p></p>
+            <p>자바스크립트에서 객체에 함수값을 넣는 것도 가능합니다.</p>
+            <div class="code">
+<pre><code>const obj = {
+    a: 100,
+    b: [200, 300],
+    c: {x: 400, y: 500},
+    d: "javascript",
+    e: function(){
+        document.write("javascript가 실행되었습니다.");
+}</code></pre>
+            </div>
 
         </div>
 

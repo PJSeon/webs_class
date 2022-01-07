@@ -28,13 +28,74 @@
     <main id="main">
         <div class="doc">
             <h2>자바스크립트 선언문</h2>
+            <p>선언문은 자바스크립트 코드를 작성할 영역을 선언하는 것이라고 이해하면 됩니다.</p>
+            <p>&lt;script&gt; 라는 태그로 선언문이 시작된곳부터 &lt;script&gt; 라는 태그로 종료된 곳 까지 스크립트 영역 이라고 부릅니다</p>
+            <div class="code">
+<pre><code>&lt;script&gt;
+    자바스크립트 코드;          //주로 body끝부분에 놓는 이유 : 빨라 보이려고
+&lt;/script&gt;
+ </code></pre>
+            </div>
 
             <h2>자바스크립트 주석처리</h2>
+            <p>자바스크립트 선언문 안에서 코드가 아닌 설명글을 넣고 싶을 때는 주석 처리를 하면 됩니다.</p>
+            <p>자바스크립트에서 주석은 html 주석과 다른 형태를 띕니다.</p>
+            <ul>
+                <li>한 줄 주석 : //</li>
+                <li>여러 줄 주석 : /* */</li>
+            </ul>
+            <div class="code">
+<pre><code>&lt;html&gt;
+&lt;head&gt;
+&lt;!-- 이것은 hmtml 주석입니다.--&gt;
+&lt;script type="javascript"&gt;
+    // 자바스크립트 주석1
+    // 자바스크립트 주석2
+
+    /*
+        여러 줄 주석
+        여러 줄 주석2
+    */
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;       
+</code></pre>
+            </div>
 
             <h2>코드 입력시 주의사항</h2>
+            <p>1. 자바스크립트는 대, 소문자를 구분하여 작성합니다.</p>
+            <div class="code">
+<pre><code>객체 생성: New date(); (x)
+객체 생성: new Date(); (o)     
+</code></pre>
+            </div>
+            <br>
+            <p>2. 코드 한 줄을 작성한 후에는 세미콜론(;)을 쓰는 것이 좋습니다.</p>
+            <div class="code">
+<pre><code>document.write("hi") document.write("bye") (x)
+document.write("hi") document.write("bye"); (o) 
+</code></pre>
+            </div>
+            <br>
+            <p>3. 코드는 한 줄에 한 문장만 작성하는 것이 가독성을 위해 좋습니다.</p>
+            <br>
+            <p>4. 문자형 데이터 작성시 큰따옴표(" ")와 작은 따옴표(' ')의 겹침 오류를 주의해야 합니다.</p>
+            <div class="code">
+<pre><code>document.write("책에 "자바스크립트는 대소문자를 구분해야 합니다"라고 나와 있다."); (x)
 
-        </div>
-
+document.write('책에 "자바스크립트는 대소문자를 구분해야 합니다" 라고 나와 있다.'); (o)
+document.write("책에 '자바스크립트는 대소문자를 구분해야 합니다' 라고 나와 있다."); (o)
+</code></pre>
+            </div>
+            <br>
+            <p>5. 실행문 작성시 괄호의 짝이 맞아야 합니다.</p>
+            <div class="code">
+<pre><code>document.write("welcome!"; (x)
+document.write("welcome!"); (o)
+</code></pre>
+            </div>      
     </main>
 </body>
 

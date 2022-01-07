@@ -47,7 +47,7 @@ li {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #000;
 }
 
 /* top */
@@ -70,7 +70,7 @@ a {
 
 /* header */
 #header {
-    padding: 40px 0;
+    padding: 40px;
     border-bottom: 1px dashed #cdcdcd;
 }
 
@@ -116,7 +116,7 @@ a {
 
 /* main */
 #main {
-    padding: 40px 0;
+    padding: 40px;
 }
 
 /* list */
@@ -128,6 +128,21 @@ a {
 .list ul li {
     font-size: 18px;
     line-height: 1.8;
+}
+
+@media (max-width: 800px) {
+    #main {
+        padding: 20px;
+    }
+
+    .list {
+        padding-bottom: 20px;
+    }
+
+    .list ul li {
+        font-size: 14px;
+        line-height: 1.6;
+    }
 }
 
 /* note */
@@ -160,28 +175,13 @@ a {
     }
 }
 
-@media (max-width: 800px) {
-    #main {
-        padding: 20px;
-    }
-
-    .list {
-        padding-bottom: 20px;
-    }
-
-    .list ul li {
-        font-size: 14px;
-        line-height: 1.6;
-    }
-}
-
 /* script */
 .script {
     padding: 40px 0;
 }
 
 .script .sample {
-    margin-bottom: 40px;
+    margin-bottom: 80px;
 }
 
 .script .sample h3 {
@@ -249,7 +249,7 @@ margin-left: 20px;
     padding: 20px 20px 15px 20px;
     border-radius: 10px;
 }
-.doc .code{
+.doc .code {
     padding: 20px 20px 15px 20px;
     border-radius: 10px;
     background: #f4f8fa;
@@ -259,6 +259,6 @@ margin-left: 20px;
     background: #dff4ff;
     font-weight: normal;
     border-radius: 20px;
-    padding: 2px 5px 0px 5px;
+    padding: 2px 15px 0px 15px;
     display: inline-block;
 }
