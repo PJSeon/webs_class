@@ -173,6 +173,7 @@
                 <div class="result">
                     <h4>결과보기</h4>
                     <div class="result04"></div>
+                    <div class="result04_1"></div>
                 </div>
             </div>
             <!-- //sample4 -->
@@ -563,17 +564,11 @@
                 x = 200; //지역변수 100 -> 200
                 y = 300; //전역변수 200 -> 300
 
-                document.write("<br>함수 안<br>");
-                document.write(x, "<br>");
-                document.write(y, "<br>");
-                document.write(z, "<br>");
+                document.querySelector(".result04").innerHTML ="함수 안<br>" + x + "<br>" + y + "<br>" + z;
             }
             func();
 
-            document.write("함수 밖 <br>")
-            document.write(x, "<br>");
-            document.write(y, "<br>");
-            document.write(z, "<br>");
+            document.querySelector(".result04_1").innerHTML ="함수 밖<br>" + x + "<br>" + y + "<br>" + z;
         }
 
         // 05. 상수 : 데이터 저장 + 데이터 변경 (X)
@@ -745,6 +740,7 @@
                 //500
                 //javascript가 실행되었습니다.
 
+                
             document.write(obj.a, "<br>");
             document.write(obj.b, "<br>");
             document.write(obj.b[0], "<br>");
