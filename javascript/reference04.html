@@ -18,18 +18,35 @@
         <h1><a href="index.html">Javascript</a></h1>
         <nav>
             <ul>
-                <li><a href="reference01.html">기초 문법</a></li>
-                <li><a href="reference02.html">변수</a></li>
-                <li><a href="reference03.html">자료형</a></li>
+                <li class="active"><a href="reference04.html">for문</a></li>
+                <li><a href="reference05.html">연산자</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main">
         <div class="doc">
+            <h2>for() 문</h2>
+            <p>반복문의 종류 중 하나로, 어떤 특정한 조건이 거짓으로 판별될 때까지 반복하고 싶을 때 사용합니다.</p>
 
+            <div class="code">
+<pre><code><strong>for문의 구조</strong>
+for (초기식; 조건식; 증감식) {
+    조건식의 결과가 참인 동안 반복적으로 실행하고자 하는 실행문;
+}
+</code></pre>
+            </div>
 
-        </div>
+            <h2>for()문 문법</h2>
+
+            <div class="code">
+<pre><code>for( let i=0; i&lt;arr(length); i++ ){
+}
+초기식 설정 : let i=0 초기 시작 값을 0으로 설정하고 초기값은 오직 한 번만 실행되며 이후로는 실행되지 않습니다.
+조건식 설정 : i&lt;arr(length) 조건에 맞으면 실행됩니다.
+증감식 설정 : 조건에 맞으면 1씩 증가됩니다.
+</code></pre>
+            </div>
 
     </main>
 </body>
