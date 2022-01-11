@@ -11,123 +11,9 @@
     <link rel="shortcut icon" href="../assets/face/css.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/face/css.png">
     <link rel="icon" href="../assets/face/css.png" sizes="128x128">
-
-    <style>
-        @font-face {
-            font-family: 'GmarketSans';
-            font-weight: 300;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'GmarketSans';
-            font-weight: 500;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        @font-face {
-            font-family: 'GmarketSans';
-            font-weight: 700;
-            font-style: normal;
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
-            src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
-                url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
-            font-display: swap;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            font-family: 'GmarketSans';
-        }
-
-        body {
-            background: #f5f5f5;
-        }
-
-        #header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            border-bottom: 1px solid #000;
-        }
-
-        #header h1 {
-            font-weight: 500;
-            padding: 20px 10px 10px 20px;
-        }
-
-
-        #header strong {
-            font-weight: 300;
-            padding: 10px 20px 10px 10px;
-        }
-
-        #contents {
-            width: 1200px;
-            margin: 0 auto;
-        }
-
-        #contents h2 {
-            font-size: 80px;
-            text-align: center;
-            padding: 5% 5% 5% 5%;
-        }
-
-        #contents h2 em {
-            font-style: normal;
-            color: #00db72;
-        }
-
-        #contents .refer {
-            background: #fff;
-            padding: 60px;
-            border: 1px solid #000;
-        }
-
-        #contents .refer table {
-            width: 100%;
-            border: 1px solid #aaa;
-            border-collapse: collapse;
-        }
-
-        #contents .refer table th {
-            border: 1px solid #aaa;
-            padding: 15px;
-            background: #f5f5f5;
-            font-weight: 500;
-        }
-
-        #contents .refer table td {
-            border: 1px solid #aaa;
-            padding: 15px;
-            font-weight: 300;
-        }
-
-        #contents .refer table caption {
-            text-indent: -9999px;
-        }
-
-        #contents .refer table tbody tr:hover {
-            background: #00db72;
-            color: #fff;
-            cursor: grab;
-        }
-    </style>
+    
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
@@ -138,6 +24,14 @@
 
     <main id="contents">
         <h2>CSS <em> 레퍼런스 북</em></h2>
+        <div class="menu">
+            <ul>
+                <li><a href="reference01.html">기초 문법</a></li>
+                <li><a href="reference02.html">웹표준/웹접근성/웹호환성</a></li>
+            </ul>
+        </div>
+        <!-- //menu -->
+
         <section class="refer">
             <table>
                 <caption>CSS 레퍼런스 속성과 설명을 나타내는 표입니다.</caption>
@@ -158,7 +52,9 @@
                     </tr>
                     <tr>
                         <td>align-items</td>
-                        <td></td>
+                        <td>align-items 속성은 플렉스 박스(flex box)라고도 불리며, CSS3에서 처음 소개된 레이아웃 모델입니다.
+                            이 레이아웃은 서로 다른 크기의 화면과 기기에서도 HTML 요소들이 자동으로 재정렬되어,
+                            웹 페이지의 레이아웃을 언제나 똑같이 유지할 수 있게 해줍니다. </td>
                     </tr>
                     <tr>
                         <td>align-self</td>
@@ -278,7 +174,7 @@
                     </tr>
                     <tr>
                         <td>border-collapse</td>
-                        <td></td>
+                        <td>border-collapse 속성은 테이블의 셀 구분선을 처리하기 위한 환경을 설정할 때 사용합니다.</td>
                     </tr>
                     <tr>
                         <td>border-color</td>
@@ -498,7 +394,7 @@
                     </tr>
                     <tr>
                         <td>flex-direction</td>
-                        <td></td>
+                        <td>flex-direction 속성은 플렉스 아이템의 방향을 지정할 때 사용합니다.</td>
                     </tr>
                     <tr>
                         <td>flex-flow</td>
@@ -642,7 +538,9 @@
                     </tr>
                     <tr>
                         <td>justify-content</td>
-                        <td></td>
+                        <td>justify-content 속성은 기본축의 양쪽 끝단을 기준으로,
+                            아이템을 어떻게 균등하게 배분 정렬할지 결정할 때 사용합니다.
+                        </td>
                     </tr>
                     <tr>
                         <td>left</td>
@@ -706,7 +604,7 @@
                     </tr>
                     <tr>
                         <td>min-width</td>
-                        <td></td>
+                        <td>min-width 속성은 요소의 최소 가로 크기를 설정할 때 사용합니다.</td>
                     </tr>
                     <tr>
                         <td>mix-blend-mode</td>
@@ -750,11 +648,11 @@
                     </tr>
                     <tr>
                         <td>overflow</td>
-                        <td></td>
+                        <td>overflow 속성은 요소 내의 내용이 크기가 정해진 요소 영역보다 넘치는 경우에 처리할 방식을 설정할 때 사용합니다.</td>
                     </tr>
                     <tr>
                         <td>overflow-x</td>
-                        <td></td>
+                        <td>overflow-x 속성은 정해진 크기의 요소 내 내용이 넘치는 경우, 가로 방향으로 어떻게 처리할 것인지를 설정합니다.</td>
                     </tr>
                     <tr>
                         <td>overflow-y</td>
@@ -826,7 +724,7 @@
                     </tr>
                     <tr>
                         <td>table-layout</td>
-                        <td></td>
+                        <td>table-layout 속성은 표의 가로크기를 고정시키거나 자동으로 조정되도록 할 때 사용합니다.</td>
                     </tr>
                     <tr>
                         <td>text-align</td>
@@ -870,7 +768,12 @@
                     </tr>
                     <tr>
                         <td>text-transform</td>
-                        <td></td>
+                        <td>text-transform 속성은 텍스트의 대소문자 설정을 할 때 사용합니다.
+                            <p>uppercase - 모두 대문자로 변환</p>
+                            <p>lowercase - 모두 소문자로 변환</p>
+                            <p>capitalize - 각 단어의 첫 문자를 대문자로 변환</p>
+                            <p>none - 대문자 없이 그대로 화면에 렌더링</p>
+                        </td>
                     </tr>
                     <tr>
                         <td>top</td>
