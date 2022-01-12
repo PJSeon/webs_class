@@ -7,7 +7,7 @@ https://pjseon.github.io/webs_class/
 https://pjseon.github.io/webs_class/javascript/index.html
 
 ## HTML 레퍼런스
-http://127.0.0.1:5500/refer/html.html
+https://pjseon.github.io/webs_class/refer/html.html
 
 ## CSS 레퍼런스
-http://127.0.0.1:5500/refer/css.html
+https://pjseon.github.io/webs_class/refer/css.html
