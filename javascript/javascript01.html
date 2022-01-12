@@ -566,7 +566,7 @@
                 let x = 100; //지역변수
                 let z = "javascript";
                 x = 200; //지역변수 100 -> 200
-                y = 300; //전역변수 200 -> 300
+                y = 300; //전역변수 200 -> 300 //z값은 undefiened가 나와야됨 (안나오는게 정상)
 
                 document.querySelector(".result04").innerHTML ="함수 안<br>" + x + "<br>" + y + "<br>" + z;
             }
