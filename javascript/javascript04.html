@@ -294,9 +294,9 @@
                 <h3>10. 중첩 for문</h3>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-    for(let i=1; i&lt;=5; i++){
+    for(let i=1; i&lt;=2; i++){
         document.write(i + ". 실행(i)되었습니다.");
-        for(let j=1; j&lt;=5; j++){
+        for(let j=1; j&lt;=3; j++){
             document.write(j + ". 실행(j)되었습니다.");
         }
     }
@@ -305,7 +305,15 @@
                 <div class="result">
                     <h4>결과보기</h4>
                     <div class="result010">
-
+                        1. 실행(i)되었습니다.<br>
+                        1. 실행(j)되었습니다.<br>
+                        2. 실행(j)되었습니다.<br>
+                        3. 실행(j)되었습니다.<br>
+                        <br>
+                        2. 실행(i)되었습니다.<br>
+                        1. 실행(j)되었습니다.<br>
+                        2. 실행(j)되었습니다.<br>
+                        3. 실행(j)되었습니다.<br>
                     </div>
                 </div>
             </div>
