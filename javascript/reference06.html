@@ -31,6 +31,7 @@
                 <li><a href="reference04.html">for문</a></li>
                 <li><a href="reference05.html">연산자</a></li>
                 <li class="active"><a href="reference06.html">조건문</a></li>
+                <li><a href="reference07.html">반복문</a></li>
             </ul>
         </nav>
     </header>
@@ -170,8 +171,33 @@ if(num){        //0은 false입니다
                 &nbsp;&nbsp;&nbsp;&nbsp;}<br>
                 }
             </div>
+            <br>
+            <p>중첩 if문은 바깥쪽에 있는 조건문인 조건식1을 만족해야만 안쪽에 있는 조건문인 조건식2를 검사합니다.</p>
+            <p>만일 안쪽if문의 조건식2를 만족하지 않으면 바깥쪽 조건문인 조건식1의 중괄호 안에 있는 코드만 실행하고 종료됩니다.</p>
+            <p>아래 예제와 같이 방문자로부터 아이디와 비밀번호를 입력받았을 때 아이디와 비밀번호를 한 번에 처리하지 않아도 됩니다. 
+                방문자의 아이디가 일치하지 않으면 비밀번호의 일치 여부를 굳이 검사하지 않아도 되니까요.
+            </p>
+            <div class="code">
+<pre><code>&lt;script&gt;
+    var id = "easy1004";        //아이디
+    var pw = "112233";          //비밀번호
+    
+    var user_id = prompt("아이디는?", "");      //아이디 입력
+    var user_pw = prompt("비밀번호는?", "")     //비밀번호 입력
 
-
+    if(id == user_id){     //아이디가 일치하면 실행됩니다.
+        if(pw == user_pw){
+            document.write(user_id+"님 반갑습니다!");   //비밀번호가 일치하면 실행됩니다. 
+        }else{
+            alert("비밀번호가 일치하지 않습니다.");     //비밀번호가 일치하지 않으면 실행됩니다. 
+            location.reload();  //브라우저 새로고침
+        }
+    }else{
+        alert("아이디가 일치하지 않습니다.");       //아이디가 일치하지 않으면 실행됩니다. 
+        location.reload();
+    }
+&lt;/script&gt;</code></pre>
+            </div>
 
         </div>
     </main>
