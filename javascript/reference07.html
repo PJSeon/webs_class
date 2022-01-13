@@ -90,10 +90,34 @@
             </div>
 
             <h3 class="mt50">break문</h3>
-            <p>break 문은 현재 반복문, switch 문, 또는 label 문을 종료하고, 그 다음 문으로 프로그램 제어를 넘깁니다.
-            즉, 반복문 내에서 표현식의 판단 결과에 상관없이 반복문을 완전히 빠져나가고 싶을 때 사용한다.
-            break문은 if,switch,for,while문등에서 break문을 만나면 바로 빠져나가는 명령문 입니다.
+            <p>while문 또는 for문과 같은 반복문에서 break 문을 실행하면 조건식과 상관 없이 강제로 반복문을 종료할 수 있습니다.
+            즉, break 문은 반복문을 강제로 종료할 때 사용합니다. 
             </p>
+            <div class="line"><strong>for</strong><br>
+            for(초깃값; 조건식; 증감식){<br>
+                break;  //반복문을 강제로 종료합니다.<br>
+                자바스크립트 코드;<br>
+            }    
+            </div>
+            <p></p>
+            <div class="line"><strong>while</strong><br>
+            var 변수=초깃값;<br>
+            while(조건식){<br>
+                break;  //반복문을 강제로 종료합니다. <br>
+                자바스크립트 코드;<br>
+                증감식;<br>
+            }<br>
+            </div>
+
+            <div class="code"><strong>예제</strong> - 안녕하세요1~안녕하세요10까지 출력
+<pre><code>&lt;script&gt;
+    for(var i = 1; i &lt;=10; i++){
+        if(i == 6) break;       //i의 값이 6이면 break 문으로 종료합니다. 
+        document.write(i, "&lt;br&gt;");
+    }
+    document.write("=== The End ===");
+&lt;/script&gt;</code></pre>
+            </div>
 
             <h3 class="mt50">continue문</h3>
             <p>루프 내에서 사용하여 해당 루프의 나머지 부분을 건너뛰고, 바로 조건문을 수행 한다.
