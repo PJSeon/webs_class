@@ -50,21 +50,51 @@
             <p>쉽게 말해, 함수는 하나의 특별한 목적을 수행하도록 설계된 독립적인 블록을 의미합니다.</p>
             
             <h3>선언적함수 </h3>
-            <p class="line">function 함수(){<br>
-            &nbsp;&nbsp;자바스크립트 코드;<br>
-            }</p>
+            <p class="line">function 함수명(a,b,c){자바스크립트 코드;}</p>
             <p class="mb20">위와 같은 함수를 선언적 함수라고 하며, 함수를 만드는 일반적인 방식으로 익명 함수와 달리 특정한 이름을 가지고 있다.</p>
             <div class="code">코드</div>
 
             <h3>익명함수 </h3>
-            <p class="line">문법정리</p>
-            <p>설명</p>
-            <div class="code">코드</div>
+            <p class="line">function(a,b,c){자바스크립트 코드}; </p>
+            <p class="mb50">위처럼 함수명이 없는 함수를 익명함수라고 합니다.</p>
+            <p>아래 예제는 선언적 ㅎ마수와 익명 함수를 변수에 참조한 예 입니다.</p>
+            <div class="code">
+<pre>
+&lt;script&gt;
+    var count = 0;
+
+    myFnc();
+
+    function myFnc() {
+        count++; 
+        document.write("hello" + count, "&lt;br&gt;");
+    }
+    myFnc(); 
+    var theFnc = function() {
+        count++;
+        document.write("bye" + count, "&lt;br&gt;");
+        }
+
+    theFnc(); 
+&lt;/script&gt;
+</pre>
+            </div>
 
             <h3>매개변수 함수</h3>
             <p>문법정리</p>
             <p>설명</p>
-            <div class="code">코드</div>
+            <div class="code">
+<pre>&lt;script&gt;
+    function myFnc(name, area) {
+        document.write("안녕하세요." + name + "입니다", "&lt;br&gt;");
+        document.write("사는 곳은" + area + "입니다", "&lt;br&gt;&lt;br&gt;");
+    }
+
+    myFnc("홍당무", "서울");    //안녕하세요. 홍당무입니다.
+                                //사는 곳은 서울입니다.
+    myFnc("깍두기", "부산");    
+&lt;script&gt;</pre>
+            </div>
 
             <h3>리턴값 함수</h3>
             <p class="line">function 함수명() {<br>
@@ -79,7 +109,7 @@
             <p>return 문은 함수에서 결괏값을 반환할 때 사용합닏. 그리고 함수에서 return 문이 실행되면 반복문의 break 문과 비슷하게 
                 코드가 강제로 종료됩니다. 다시 말해 함수 정의문에 return문이 사용되면 함수를 호출했을 때 결괏값을 반환합니다.
             </p>
-            <p>함수 실행을 종료하고, 주어진 값을 호출 지점으로 반환한다고 보면 되겠습니다.</p>
+            <p>쉽게 말해, 함수를 호출했던 위치로 되돌아가라는 의미라고 보면 되겠습니다.</p>
             <div class="code">코드1</div>
 
             <div class="code">코드2</div>
@@ -87,14 +117,32 @@
 
            
 
-            <div class="code"><strong>예제</strong> - for문을 이용해 1부터 10까지 i가 2의 배수일 경우에만 continue 실행하여 홀수만 출력
+            <div class="code">
 <pre><code>&lt;script&gt;
-    for(var i = 1; i &lt;=10; i++) {
-        if(i % 2 == 0 ) continue;       //continue 문은 반복문 이후의 코드 실행을 건너뛰고 다시 반복문의 증감식을 수행합니다.
-        document.write(i, "&lt;br&gt;");
-    }
-    document.write("===The End===");
-&lt;/script&gt;</code></pre>
+   var num = 1;
+   function gallery(direct) {
+       if (direct) {
+           if(num == 8) return;
+           num++
+       } else {
+           if(num == 1) return;
+           num--
+       }
+
+       var imgTag = document.getElementByld("photo");
+       imgTag.setAttribute("src", "images/pic_" + num + ".jpg");
+   }
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="galleryZone"&gt;
+       &lt;p&gt;&lt;img src="images/pic_1.jpg" id="photo" alt=""&gt;&lt;/p&gt;
+       &lt;p&gt;
+           &lt;button onclick="gallery(0)">이전&lt;/button&gt;
+           &lt;button onclick="gallery(1)">다음&lt;/button&gt;
+       &lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;</code></pre>
             </div>
         </div>
     </main>
