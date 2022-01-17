@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout03-3</title>
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/face/layout.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/layout.png">
+    <link rel="icon" href="../assets/face/layout.png" sizes="128x128">
+    
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #ECF5EB;
+        }
+        #wrap {
+            width: 1200px;
+            background-color: #D2E4CD;
+            margin: 0 auto;
+        }
+        #header {
+            width: 1200px;
+            height: 100px;
+            background-color: #D2E4CD;
+        }
+        #nav {
+            width: 1200px;
+            background-color: #88B779;
+            display: flex;
+        }
+
+        #nav .left {
+            width: 400px;
+            height: 100px;
+            background-color: #B7D4AF;
+        }
+
+        #nav .center {
+            width: 400px;
+            height: 100px;
+            background-color: #8FBC82;
+        }
+        
+        #nav .right {
+            width: 400px;
+            height: 100px;
+            background-color: #B7D4AF;
+        }
+
+        #contents {
+            width: 1200px;
+            display: flex;
+        }
+
+        #contents .aside1{
+            width: 300px;
+            height: 780px;
+            background-color: #9CC390;
+        }
+        #contents .aside2{
+            width: 600px;
+            background-color: #88B779;
+        }
+        #contents .aside3{
+            width: 300px;
+            height: 780px;
+            background-color: #77AB64;
+        }
+
+        #contents .aside2 .article1 {
+            width: 600px;
+            height: 390px;
+            background-color: #88B779;
+        }
+        #contents .aside2 .article2 {
+            width: 600px;
+            height: 390px;
+            background-color: #6A9B5A;
+        }
+        #footer {
+            width: 1200px;
+            height: 100px;
+            background-color: #6C9C5B;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav">
+            <section class="left"></section>
+            <section class="center"></section>
+            <section class="right"></section>
+        </nav>
+        <section id="contents">
+            <aside class="aside1"></aside>
+            <aside class="aside2">
+                <article class="article1"></article>
+                <article class="article2"></article>
+            </aside>
+            <aside class="aside3"></aside>
+        </section>
+        <footer id="footer"></footer>
+    </div>
+    
+</body>
+</html>
