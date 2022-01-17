@@ -59,7 +59,7 @@ document.querySelector(".result12t h4").addEventListener("click", function(){
 //forEach문을 이용해서 1부터 12까지 출력!!!
 document.querySelectorAll(".result h4").forEach(function(el){
     //console.log(el)
-    el.addEventListener("clikc", function(){
+    el.addEventListener("click", function(){
         alert("클릭");
     })
 });
@@ -72,8 +72,11 @@ document.querySelectorAll(".result h4").forEach(function(el){
 //     console.log(num[i]); //100 200 300 400 500
 // }
 
-//forEach()
+// forEach()
 // num.forEach(function(el, index){
 //     console.log(el) //100 200 300 400 500
 //     console.log(index) //0 1 2 3 4
 // });
+
+
+    
