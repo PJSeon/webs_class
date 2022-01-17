@@ -63,6 +63,7 @@ a {
     position: fixed;
     right: 20px;
     bottom: 20px;
+    z-index: 10000;
 }
 
 .top a {
@@ -81,6 +82,7 @@ a {
     position: fixed;
     right: 20px;
     top: 20px;
+    z-index: 10000;
 }
 
 .back a {
