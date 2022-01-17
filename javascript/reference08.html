@@ -47,15 +47,29 @@
                 TV의 해당 채널로 바꿀 수 있는 코드가 저장되어 있죠. 이 코드는 사용자가 리모컨의 버튼을 눌러(호출)야만 실행됩니다. 
                 이때 각 TV 리모컨의 버튼은 함수를 저장하고 있으며 버튼을 누를 때마다 함수가 호출 된다고 할 수 있습니다.
             </p>
-            <p>쉽게 말해, 함수는 하나의 특별한 목적을 수행하도록 설계된 독립적인 블록을 의미합니다.</p>
+            <p>쉽게 말해, 함수란 한 마디로 프로그램의 코드를 저장한 공간이라고 할 수 있습니다.
+                함수를 사용하면 코드를 메모리에 저장했다가 필요할 때마다 호출하여 사용할 수 있죠.
+            </p>
             
             <h3>선언적함수 </h3>
-            <p class="line">function 함수명(a,b,c){자바스크립트 코드;}</p>
-            <p class="mb20">위와 같은 함수를 선언적 함수라고 하며, 함수를 만드는 일반적인 방식으로 익명 함수와 달리 특정한 이름을 가지고 있다.</p>
-            <div class="code">코드</div>
+            <div class="code">
+<pre>function(){
+    자바스크립트 코드;
+}함수명;
+</div></pre>
+           
+            <p class="mb20">위와 같은 함수를 선언적 함수라고 하며, 함수를 만드는 일반적인 방식으로 익명 함수와 달리
+                 특정한 이름을 가지고 있습니다. 함수를 사용하여 코드를 저장한 것을 '함수 정의문'이라고 한다.
+                 변수를 선언할 때 var 키워드를 사용한 것처럼 함수에서는 funciton 키워드를 사용해
+                 변수를 선언한다.</p>
+                
 
             <h3>익명함수 </h3>
-            <p class="line">function(a,b,c){자바스크립트 코드}; </p>
+            <div class="code">
+<pre>참조변수=function(){
+            자바스크립트 코드;
+            }
+</div></pre>
             <p class="mb50">위처럼 함수명이 없는 함수를 익명함수라고 합니다.</p>
             <p>아래 예제는 선언적 ㅎ마수와 익명 함수를 변수에 참조한 예 입니다.</p>
             <div class="code">
@@ -81,8 +95,12 @@
             </div>
 
             <h3>매개변수 함수</h3>
-            <p>문법정리</p>
-            <p>설명</p>
+            <p>기본 함수 정의문은 함수 안에 있는 코드를 실행할 때 단순히 함수명으로 호출해서 코드를 실행했습니다.
+                즉 함수를 호출할 때 값을 전달할 수 없었습니다.
+                하지만 매개변수가 있는 함수 정의문은 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있습니다.
+                이렇게 전달된 값은 매개변수가 받아 함수 정의문에서 사용할 수 있게 됩니다.</p>
+
+            <p>다음은 함수를 호출할 때 값을 전달하는 기본형입니다.</p>
             <div class="code">
 <pre>&lt;script&gt;
     function myFnc(name, area) {
@@ -106,43 +124,35 @@
             <br>
             var 변수 = 함수명();
             </p>
-            <p>return 문은 함수에서 결괏값을 반환할 때 사용합닏. 그리고 함수에서 return 문이 실행되면 반복문의 break 문과 비슷하게 
+            <p>return 문은 함수에서 결괏값을 반환할 때 사용합니다. 그리고 함수에서 return 문이 실행되면 반복문의 break 문과 비슷하게 
                 코드가 강제로 종료됩니다. 다시 말해 함수 정의문에 return문이 사용되면 함수를 호출했을 때 결괏값을 반환합니다.
             </p>
             <p>쉽게 말해, 함수를 호출했던 위치로 되돌아가라는 의미라고 보면 되겠습니다.</p>
-            <div class="code">코드1</div>
-
-            <div class="code">코드2</div>
-
-
-           
-
+            <h4>기본형</h4>
             <div class="code">
-<pre><code>&lt;script&gt;
-   var num = 1;
-   function gallery(direct) {
-       if (direct) {
-           if(num == 8) return;
-           num++
-       } else {
-           if(num == 1) return;
-           num--
-       }
+<pre>function 함수명(){
+    자바스크립트 코드1;
+    return 데이터(값);
 
-       var imgTag = document.getElementByld("photo");
-       imgTag.setAttribute("src", "images/pic_" + num + ".jpg");
-   }
-&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div id="galleryZone"&gt;
-       &lt;p&gt;&lt;img src="images/pic_1.jpg" id="photo" alt=""&gt;&lt;/p&gt;
-       &lt;p&gt;
-           &lt;button onclick="gallery(0)">이전&lt;/button&gt;
-           &lt;button onclick="gallery(1)">다음&lt;/button&gt;
-       &lt;/p&gt;
-    &lt;/div&gt;
-&lt;/body&gt;</code></pre>
+    자바스크립트 코드2;
+}
+var 변수 = 함수명();</div></pre>
+
+            <div class="code"> 예시
+<pre>&lt;script&gt;
+functoin testAvg(arrData){
+    var sum = 0;
+    for (var i = 0; i &lt; arr data.length; i++){
+        sum += Number(prompt(arrData[i] + "점수는?", "0"));
+    }
+
+    var arrSubject = {"국어", "수학"};
+    var result = testAvg(arrSubject);
+
+    document.write("평균점수는" + result + "점입니다");
+&lt;script&gt;
+</div></pre>
+
             </div>
         </div>
     </main>
