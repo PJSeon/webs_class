@@ -30,28 +30,32 @@
             height: 100px;
             background-color: #90CAF9;
         }
-        #main {
+        #contents {
             width: 1200;
             display: flex;
         }
 
-        #main .aside {
+        #contents .aside {
             width: 400px;
             height: 780px;
             background-color: #64B5F6;
         }
 
-        #main .article1{
+        #contents .content {
+            width: 800px;
+        }
+
+        #contents .article1{
             width: 800px;
             height: 260px;
             background-color: #42A5F5;
         }
-        #main .article2{
+        #contents .article2{
             width: 800px;
             height: 260px;
             background-color: #2196F3;
         }
-        #main .article3{
+        #contents .article3{
             width: 800px;
             height: 260px;
             background-color: #1E88E5;
@@ -67,14 +71,14 @@
     <div id="wrap">
         <header id="header"></header>
         <nav id="nav"></nav>
-        <main id="main">
+        <section id="contents">
             <aside class="aside"></aside>
-            <section>
+            <section class="content">
                 <article class="article1"></article>
                 <article class="article2"></article>
                 <article class="article3"></article>
             </section>
-        </main>
+        </section>
         <footer id="footer"></footer>
     </div>
    
