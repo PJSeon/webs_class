@@ -98,6 +98,30 @@
             </div>
             <!-- //sample1 -->
             
+            <!-- sample2 -->
+             <div id="sample2" class="sample">
+                <h3>02. 요소 메서드 : 클래스 : .classList.toggle() : 클래스 추가/삭제하기</h3>
+                <div class="view">
+                    <div class="view1"><img src="assets/img/image07.jpg" alt="이미지07"></div>
+                    <div class="view2"><img src="assets/img/image08.jpg" alt="이미지08"></div>
+                    <div class="view3"><img src="assets/img/image09.jpg" alt="이미지09"></div>
+                    <div class="view4"><img src="assets/img/image10.jpg" alt="이미지10"></div>
+                    <div class="view5"><img src="assets/img/image11.jpg" alt="이미지11"></div>
+                    <div class="view6"><img src="assets/img/image12.jpg" alt="이미지12"></div>
+
+                </div>
+                <div class="btn">
+                    <a href="#c" class="btn1">이 버튼을 클릭(selected)하면 두번째 이미지가 선택 또는 해제됩니다.</a>
+                    <a href="#c" class="btn2">이 버튼을 클릭(selected)하면 모든 이미지가 선택 또는 해제됩니다.</a>
+                </div>
+                <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+   
+}</code></pre>
+                </div>
+            </div>
+            <!-- //sample2 -->
+
         </div>
         <!-- //script -->
     </main>
@@ -105,6 +129,7 @@
 
     <!-- script -->
     <script>
+        //sample01
         //두번째 이미지 선택 했을 때
         document.querySelector("#sample1 .btn1").addEventListener("click", function () {
             document.querySelector("#sample1 .view2").classList.add("selected");
@@ -124,6 +149,20 @@
                el.classList.remove("selected");
            });
         });
+
+        //sample02
+        //두번째 이미지가 선택 또는 해제됩니다.
+        document.querySelector("#sample2 .btn1").addEventListener("click", function () {
+            document.querySelector("#sample2 .view2").classList.toggle("selected");
+        });
+        
+        //모든 이미지 선택
+        document.querySelector("#sample2 .btn2").addEventListener("click", function () {
+            document.querySelectorAll("#sample2 .view > div").forEach(function(el){
+                el.classList.toggle("selected");
+            });
+        });
+           
     </script>
 </body>
 </html>
