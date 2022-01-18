@@ -106,12 +106,22 @@
     <script>
         //*숙제
         //두번째 이미지를 클릭하면 두번째 이미지를 선택
-        //첫번째 이미지를 클릭하면 첫번째 이미지를 선택
-        //이 버튼을 클릭하면 선택된 클래스를 찾은 후 색을 파란색으로 나오게 하시오
-        document.querySelector("#sample2 .view").addEventListener("click", function () {
-        document.querySelector("#sample2 .view2").classList.toggle("selected");
+        document.querySelector("#sample1 .view2").addEventListener("click", function () {
+        document.querySelector("#sample1 .view2").classList.toggle("selected");
     });
 
+        //첫번째 이미지를 클릭하면 첫번째 이미지를 선택
+        document.querySelector("#sample1 .view1").addEventListener("click", function () {
+        document.querySelector("#sample1 .view1").classList.toggle("selected");
+    });
+        //이 버튼을 클릭하면 선택된 클래스를 찾은 후 색을 파란색으로 나오게 하시오
+        document.querySelector("#sample2 .btn1").addEventListener("click", function(){
+            document.querySelectorAll("#sample3 .view > div").forEach(function(el){
+                if(el.classList.contains("selected")){
+                    el.classList.remove("selected");
+                }
+            });
+        });
     </script>
 </body>
 </html>
