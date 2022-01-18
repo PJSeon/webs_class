@@ -74,7 +74,25 @@
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
-            
+    //두번째 이미지 선택 했을 때
+    document.querySelector("#sample1 .btn1").addEventListener("click", function () {
+        document.querySelector("#sample1 .view2").classList.add("selected");
+    });
+    document.querySelector("#sample1 .btn2").addEventListener("click", function () {
+        document.querySelector("#sample1 .view2").classList.remove("selected");
+    });
+
+    //모든 이미지 선택 했을 때
+    document.querySelector("#sample1 .btn3").addEventListener("click", function () {
+       document.querySelectorAll("#sample1 .view > div").forEach(function (el) {
+           el.classList.add("selected");
+       });
+    });
+    document.querySelector("#sample1 .btn4").addEventListener("click", function () {
+       document.querySelectorAll("#sample1 .view > div").forEach(function (el) {
+           el.classList.remove("selected");
+       });
+    });       
 }</code></pre>
                 </div>
             </div>
