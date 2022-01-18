@@ -91,16 +91,17 @@
                 <h3>이 버튼을 클릭하면 선택된 클래스를 찾은 후 색을 파란색으로 나오게 하시오</h3>
                 <div class="view">
                     <div class="view1"><img src="assets/img/image13.jpg" alt="이미지13"></div>
-                    <div class="view2"><img src="assets/img/image14.jpg" alt="이미지14"></div>
+                    <div class="view2 selected"><img src="assets/img/image14.jpg" alt="이미지14"></div>
                     <div class="view3"><img src="assets/img/image15.jpg" alt="이미지15"></div>
-                    <div class="view4"><img src="assets/img/image16.jpg" alt="이미지16"></div>
+                    <div class="view4 selected"><img src="assets/img/image16.jpg" alt="이미지16"></div>
                     <div class="view5"><img src="assets/img/image17.jpg" alt="이미지17"></div>
-                    <div class="view6"><img src="assets/img/image18.jpg" alt="이미지18"></div>
+                    <div class="view6 selected"><img src="assets/img/image18.jpg" alt="이미지18"></div>
 
                 </div>
                 <div class="btn">
                     <a href="#c" class="btn1">이 버튼을 클릭(selected)하면 두번째 이미지가 선택 또는 해제됩니다.</a>
                     <a href="#c" class="btn2">이 버튼을 클릭(selected)하면 모든 이미지가 선택 또는 해제됩니다.</a>
+                    <a href="#c" class="btn3">이 버튼을 클릭(selected)하면 선택된 클래스를 찾은 후 색을 파란색으로 나옵니다.</a>
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -126,14 +127,23 @@
         document.querySelector("#sample2 .view1").addEventListener("click", function () {
         document.querySelector("#sample2 .view1").classList.toggle("selected");
     });
+
+        //리셋
+        document.querySelector("#sample3 .btn0").addEventListener("click", function(){
+            document.querySelector("#sample3 .view2").classList.add("selected");
+            document.querySelector("#sample3 .view4").classList.add("selected");
+            document.querySelector("#sample3 .view6").classList.add("selected");
+        });
+         
         //이 버튼을 클릭하면 선택된 클래스를 찾은 후 색을 파란색으로 나오게 하시오
         document.querySelector("#sample3 .btn1").addEventListener("click", function(){
             document.querySelectorAll("#sample3 .view > div").forEach(function(el){
                 if(el.classList.contains("selected")){
-                    el.classList.remove("selected");
+                    el.classList.remove("selected2");
                 }
             });
         });
+
     </script>
 </body>
 </html>

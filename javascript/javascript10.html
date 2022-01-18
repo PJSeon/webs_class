@@ -150,6 +150,7 @@
                 <div class="btn">
                     <a href="#c" class="btn0">리셋</a>
                     <a href="#c" class="btn1">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다.</a>
+                    <a href="#c" class="btn2">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 파란색.</a>
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -219,7 +220,12 @@
         document.querySelector("#sample3 .btn0").addEventListener("click", function(){
             document.querySelector("#sample3 .view2").classList.add("selected");
             document.querySelector("#sample3 .view4").classList.add("selected");
-            document.querySelector("#sample3 .view6").classList.add("selected");
+            document.querySelector("#sample3 .view6").classList.add("selected"); 
+            document.querySelectorAll("#sample3 .view > div").forEach(function(el){
+                if(el.classList.contains("selected")){
+                    el.classList.remove("selected2");
+                }
+            });
         });
         
         //이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다.
@@ -227,6 +233,15 @@
             document.querySelectorAll("#sample3 .view > div").forEach(function(el){
                 if(el.classList.contains("selected")){
                     el.classList.remove("selected");
+                }
+            });
+        });
+        //파란색
+        document.querySelector("#sample3 .btn2").addEventListener("click", function(){
+            document.querySelectorAll("#sample3 .view > div").forEach(function(el){
+                if(el.classList.contains("selected")){
+                    el.classList.remove("selected");
+                    el.classList.add("selected2");
                 }
             });
         });
