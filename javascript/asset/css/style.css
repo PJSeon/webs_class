@@ -58,6 +58,10 @@ a {
     color: #000;
 }
 
+img {
+    width: 100%;
+}
+
 /* top */
 .top {
     position: fixed;
@@ -222,6 +226,35 @@ a {
     margin-bottom: 80px;
 }
 
+.script .sample .view {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    border: 1px solid #E6E6E6
+}
+
+.script .sample .view > div {
+    width: 16%;
+}
+
+.script .sample .btn {
+    border: 1px solid #E6E6E6;
+    border-top: 0;
+    padding: 2%;
+}
+
+.script .sample .btn a {
+    border: 1px solid #333;
+    border-radius: 30px;
+    padding: 10px 30px;
+    display: inline-block;
+}
+
+.script .sample .btn a:hover {
+    background-color: #000;
+    color: #FFF;
+}
+
 .script .sample h3 {
     background: #F2F2F2;
     font-size: 16px;
@@ -373,7 +406,6 @@ a {
     border-radius: 0 0 5px 5px;
     font-size: 16px;
     line-height: 1.4;
-    display: none;
 }
 
 @media (max-width: 800px) {
