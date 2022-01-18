@@ -1,7 +1,9 @@
 //결과보기 버튼을 클릭하면 경고창을 띄워주세요~
 document.querySelectorAll(".result").forEach(function(el){
     el.addEventListener("click", function(){
-        alert("dd")
+       document.querySelectorAll(".result").forEach(function(el){
+           el.classList.toggle("click");
+       })
     })
 });
 //toggle써야됨
