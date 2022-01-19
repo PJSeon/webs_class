@@ -1,12 +1,95 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice01-3</title>
+    <title>Practice01-1</title>
+    <!-- style -->
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="asset/css/prism2.css">
+
+    <!-- script -->
+    <script src="asset/js/prism2.js"></script>
 </head>
+
 <body>
-    
+
+    <div class="back"><a href="practice01.html">Back</a></div>
+
+    <main id="main">
+        <div class="test">
+            <h2>1. 테이블 출력하기</h2>
+
+            <!-- 01 -->
+            <h3>1.1 for문을 이용해서 테이블을 출력하시오!</h3>
+            <div class="code">
+<pre class="line-numbers"><code class="language-js">{
+  
+}</code></pre>
+            </div>
+            <!-- //01 -->
+        </div>
+        <!-- <style>
+            table {border: 1px solid #000;}
+        </style> -->
+        <!-- <table border="1">
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+            </tr>
+        </table> -->
+
+    </main>
+
+    <!-- script -->
+    <script>
+       let table = "<table border='1'>";
+        
+        for( let i=1; i<=5; i++ ){
+            table += "<tr>";
+                for (let j=1; j<=5; j++){
+                    table += "<td>1</td>";
+                }
+            table += "</tr>";
+        }
+        
+        table += "</table>";
+
+        document.write(table);
+    </script>
 </body>
+
 </html>
