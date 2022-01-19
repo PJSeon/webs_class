@@ -27,12 +27,12 @@
             <div class="code">
 <pre class="line-numbers"><code class="language-js">{
     for ( let i=2; i&lt;=9; i++){
-        document.write("<br>");
+        document.write("&lt;br&gt;");
         
         for(let j=1; j&lt;=9; j++){
             let sum = i * j;
 
-            document.write( i + " * " + j + " = " + sum, "<br>");
+            document.write( i + " * " + j + " = " + sum, "&lt;br&gt;");
         }
     }
 }</code></pre>
@@ -43,7 +43,15 @@
              <h3>1.2 while 문을 이용해서 2단부터 9단까지 출력하시오!</h3>
              <div class="code">
  <pre class="line-numbers"><code class="language-js">{
-    
+    let i = 2;
+    while (i&lt;=9){
+        let j = 1;
+        while(j&lt;=9){
+            document.write(i + '*' + j + '=' + (i*j) + "&lt;br&gt;");
+            j++; 
+        }
+        i++;
+    };
  }</code></pre>
              </div>
              <!-- //02 -->
@@ -106,6 +114,15 @@
 
         //while 문을 이용해서 구구단 출력
         
+        let i = 2;
+        while (i<=9){
+            let j = 1;
+            while(j<=9){
+                document.write(i + '*' + j + '=' + (i*j) + "<br>");
+                j++; 
+            }
+            i++;
+        };
 
     </script>
 </body>
