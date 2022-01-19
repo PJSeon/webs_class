@@ -114,11 +114,19 @@
 
                 </div>
                 <div class="btn">
+                    <a href="#c" class="btn0">리셋</a>
                     <a href="#c" class="btn1">이 버튼을 클릭(selected)하면 두번째 이미지가 선택 또는 해제됩니다.</a>
                     <a href="#c" class="btn2">이 버튼을 클릭(selected)하면 모든 이미지가 선택 또는 해제됩니다.</a>
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
+    //리셋
+    document.querySelector("#sample2 .btn0").addEventListener("click", function(){
+       document.querySelectorAll("#sample2 .view > div").forEach(function(el){
+           el.classList.remove("selected");
+       });
+    });
+    
     //두번째 이미지가 선택 또는 해제됩니다.
     document.querySelector("#sample2 .btn1").addEventListener("click", function () {
         document.querySelector("#sample2 .view2").classList.toggle("selected");
@@ -127,6 +135,13 @@
     //모든 이미지 선택
     document.querySelector("#sample2 .btn2").addEventListener("click", function () {
         document.querySelectorAll("#sample2 .view > div").forEach(function(el){
+            el.classList.toggle("selected");
+        });
+    });
+
+    //각각의 이미지를 클릭하면 각각의 이미지를 선택 또는 해제
+    document.querySelectorAll("#sample2 .view > div").forEach(function(el){
+        el.addEventListener("click", function(){
             el.classList.toggle("selected");
         });
     });
@@ -150,7 +165,7 @@
                 <div class="btn">
                     <a href="#c" class="btn0">리셋</a>
                     <a href="#c" class="btn1">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 클래스를 삭제합니다.</a>
-                    <a href="#c" class="btn2">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 파란색.</a>
+                    <a href="#c" class="btn2">이 버튼을 클릭하면 선택된 클래스(selected)를 찾은 후 색을 변경합니다.</a>
                 </div>
                 <div class="code">
 <pre class="line-numbers"><code class="language-js">{
@@ -203,6 +218,13 @@
         });
 
         //sample02
+        //리셋
+        document.querySelector("#sample2 .btn0").addEventListener("click", function(){
+           document.querySelectorAll("#sample2 .view > div").forEach(function(el){
+               el.classList.remove("selected");
+           });
+        });
+        
         //두번째 이미지가 선택 또는 해제됩니다.
         document.querySelector("#sample2 .btn1").addEventListener("click", function () {
             document.querySelector("#sample2 .view2").classList.toggle("selected");
@@ -215,6 +237,14 @@
             });
         });
 
+        //각각의 이미지를 클릭하면 각각의 이미지를 선택 또는 해제
+        document.querySelectorAll("#sample2 .view > div").forEach(function(el){
+            el.addEventListener("click", function(){
+                el.classList.toggle("selected");
+            });
+        });
+        
+
         //sample03
         //리셋
         document.querySelector("#sample3 .btn0").addEventListener("click", function(){
@@ -223,7 +253,7 @@
             document.querySelector("#sample3 .view6").classList.add("selected"); 
             document.querySelectorAll("#sample3 .view > div").forEach(function(el){
                 if(el.classList.contains("selected")){
-                    el.classList.remove("selected2");
+                    el.classList.remove("blue");
                 }
             });
         });
@@ -237,21 +267,26 @@
             });
         });
         //파란색
-        document.querySelector("#sample3 .btn2").addEventListener("click", function(){
-            document.querySelectorAll("#sample3 .view > div").forEach(function(el){
-                if(el.classList.contains("selected")){
-                    el.classList.remove("selected");
-                    el.classList.add("selected2");
-                }
-            });
-        });
+        // document.querySelector("#sample3 .btn2").addEventListener("click", function(){
+        //     document.querySelectorAll("#sample3 .view > div").forEach(function(el){
+        //         if(el.classList.contains("selected")){
+        //             el.classList.remove("selected");
+        //             el.classList.add("selected2");
+        //         }
+        //     });
+        // });
 
 
-        //*숙제
-        //두번째 이미지를 클릭하면 두번째 이미지를 선택
-        //첫번째 이미지를 클릭하면 첫번째 이미지를 선택
+       
+
         //이 버튼을 클릭하면 선택된 클래스를 찾은 후 색을 파란색으로 나오게 하시오
-
+        document.querySelector("#sample3 .btn2").addEventListener("click", function(){
+           document.querySelectorAll("#sample3 .view > div").forEach(function(el){
+               if(el.classList.contains("selected")){
+                   el.classList.toggle("blue");
+               }
+           });
+        });
     </script>
 </body>
 </html>
