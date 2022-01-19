@@ -55,7 +55,7 @@
 
         </div>
     </main>
-
+    <script src="asset/js/prism2.js"></script>
     <script>
         //for 1~100
         {
@@ -120,7 +120,19 @@
         }
 
         //table
+        {
+            let table="<table>";
+            for (let i=1; i<=5; i++){
+                table += "<tr>";
+                for(let j=1; j<=5; j++){
+                    table +="<td></td>";
+                }
+                table += "</tr>";
+            }
+            table += "</table>";
 
+            document.write(table);
+        }
         //table2
     </script>
 </body>
