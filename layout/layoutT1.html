@@ -5,57 +5,76 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1</title>
+    <link rel="shortcut icon" href="../assets/face/layout.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/face/layout.png">
+    <link rel="icon" href="../assets/face/layout.png" sizes="128x128">
     <style>
-        * {
+        *{
             margin: 0;
             padding: 0;
         }
-        body {
-            background-color: #FFF7D3;
+        body{
+            background-color: #F7E3EF;
         }
-
-        #container {
+        #wrap{
             width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
-        #header {
+        #header{
             width: 1200px;
             height: 100px;
-            background-color: #F7E8E0;
+            background-color: #D5CFF5;
         }
         #nav {
             width: 1200px;
             height: 100px;
-            background-color: #F7C9C7;
-        }
-        #aside {
-            width: 400px;
-            height: 780px;
-            background-color: #948199;
-            float: left;
+            background-color: #A5A6E9;
         }
         #contents {
-            width: 800px;
+            width: 1200;
+            display: flex;
+        }
+
+        #contents .aside {
+            width: 400px;
             height: 780px;
-            background-color: #9899AC;
-            float: left;
+            background-color: #9481A1;
+        }
+
+        #contents .content {
+            width: 800px;
+        }
+
+        #contents .article1{
+            width: 800px;
+            height: 390px;
+            background-color: #FF9889;
+        }
+        #contents .article2{
+            width: 800px;
+            height: 390px;
+            background-color: #FFDAA5;
         }
         #footer {
             width: 1200px;
             height: 100px;
-            background-color: #BCB3C6;
-            clear: both;
+            background-color: #735B73;
         }
     </style>
 </head>
 <body>
-    <div id="container">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="aside"></div>
-        <div id="contents"></div>
-        <div id="footer"></div>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section id="contents">
+            <aside class="aside"></aside>
+            <section class="content">
+                <article class="article1"></article>
+                <article class="article2"></article>
+            </section>
+        </section>
+        <footer id="footer"></footer>
     </div>
+   
 </body>
 </html>
