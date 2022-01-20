@@ -98,17 +98,31 @@
 
         </div>
     </main>
-    <script src="asset/js/prism.js"></script>
-    <script src="assets/js/script.js"></script>
     <script>
+          //1. while문을 이용해서 1부터 100까지 출력하시오
+          {
+            let num = 1;
+
+            while(num <= 100){
+                document.querySelector(".result .result1").innerHTML += num + " ";
+                num++;
+            }
+        }
         
-            // { //짝수
+          //2. for문을 이용해서 1부터 100까지 출력하시오
+          {
+            for(let i = 1; i<= 100; i++){
+                document.querySelector(".result .result2").innerHTML += i + " ";
+            }
+        }
+            //3. 짝수 홀수
+            // {     
             //     for (let i = 1; i <= 100; i++); {
-            //         if (i % 2 == 0) {
-            //             console.log(i);
-            //         };
-            //     }
-            // }    
+            //             if (i % 2 == 0) {
+            //                 console.log(i);
+            //             };
+            //         }
+            // }        
 
             // {   //홀수
             //     for( let i=1; i<=100; i++){
@@ -135,6 +149,8 @@
             //     }
             // }
     </script>
+    <script src="asset/js/prism.js"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
