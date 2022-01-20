@@ -57,11 +57,28 @@
              <!-- //02 -->
 
              <!-- 03 -->
-             <h3>1.3 do while 문을 이용해서 2단부터 9단까지 출력하시오!</h3>
+             <h3>1.3 사용자가 원하는 단을 출력하시오!</h3>
+             <p>조건 : 사용자가 원하는 단은 prompt()를 사용합니다. <a href="#" class="btn btn03">클릭</a></p>
              <div class="code">
  <pre class="line-numbers"><code class="language-js">{
-    
+    let num, result;
+
+    //버튼을 클릭하면 경고창을 띄워보시오
+    document.querySelector(".btn03").addEventListener("click", () => {
+        num = prompt("출력할 구구단 숫자를 입력해주세요!!", "2");
+        //console.log(num)
+
+        for(let i=1; i&lt;=9; i++){
+            result = num + " * " + i + " = " + (num * i) + "<br>"
+            //console.log(result)
+            document.querySelector(".result03").innerHTML += result;
+        }
+    });
  }</code></pre>
+             </div>
+             <div class="result result03">
+                <h4>결과보기</h4>
+                <div></div>
              </div>
              <!-- //03 -->
 
@@ -123,6 +140,23 @@
         //     }
         //     i++;
         // };
+
+        //사용자가 원하는 단을 받아 출력하시오!
+        {
+            let num, result;
+
+            //버튼을 클릭하면 경고창을 띄워보시오
+            document.querySelector(".btn03").addEventListener("click", () => {
+               num = prompt("출력할 구구단 숫자를 입력해주세요!!", "2");
+               //console.log(num)
+
+               for(let i=1; i<=9; i++){
+                   result = num + " * " + i + " = " + (num * i) + "<br>"
+                   //console.log(result)
+                   document.querySelector(".result03").innerHTML += result;
+               }
+            });
+        }
 
     </script>
 </body>
